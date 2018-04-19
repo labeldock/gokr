@@ -1,5 +1,9 @@
 <template>
   <div>
+    <header>
+      <nuxt-link to="/">home</nuxt-link>
+      <nuxt-link to="/store">store</nuxt-link>
+    </header>
     <nuxt/>
   </div>
 </template>
