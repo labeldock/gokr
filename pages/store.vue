@@ -27,7 +27,7 @@ export default {
     }
   },
   mounted (){
-    const { Map, View, TileLayer, XYZ } = require('~/libs/open-layers');
+    const { Map, View, TileLayer, XYZ, proj } = require('~/libs/open-layers');
     this.map = new Map({
       target: 'map',
       layers: [
@@ -38,8 +38,8 @@ export default {
           })
         ],
         view: new View({
-          center: [0, 0],
-          zoom: 4
+          center: proj.fromLonLat([127.05, 37.45]),
+          zoom: 10
         })
     });
   }
