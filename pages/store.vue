@@ -1,6 +1,8 @@
 <template>
   <section class="container">
-     <input type="text" v-model="storeSearch" @keyup.enter="search(storeSearch)">
+    <div id="map" class="map" tabindex="0" style="width:500px;height:500px;"></div>
+    <button @click="mapconsole">log</button>
+    <input type="text" v-model="storeSearch" @keyup.enter="search(storeSearch)">
   </section>
 </template>
 
@@ -19,7 +21,27 @@ export default {
   methods:{
     search (key){
       //공공데이터 인증키를 어케 넣냐 ㅡㅡ
+    },
+    mapconsole (){
+      console.log(this.map);
     }
+  },
+  mounted (){
+    const { Map, View, TileLayer, XYZ } = require('~/libs/open-layers');
+    this.map = new Map({
+      target: 'map',
+      layers: [
+          new TileLayer({
+            source: new XYZ({
+              url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+            })
+          })
+        ],
+        view: new View({
+          center: [0, 0],
+          zoom: 4
+        })
+    });
   }
 }
 </script>
