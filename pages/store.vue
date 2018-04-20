@@ -20,6 +20,10 @@ export default {
   },
   methods:{
     search (key){
+      axios.get("/api/list").then(({data})=>{
+        console.log(data);
+      });
+      
       //공공데이터 인증키를 어케 넣냐 ㅡㅡ
     },
     mapconsole (){

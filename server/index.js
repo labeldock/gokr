@@ -20,7 +20,12 @@ if (!isProd) {
   })
 }
 
-app.use(nuxt.render)
+app.get('/api/list',(req,res)=>{
+  res.status(200).send({foo:"bar"});
+})
+
+app.use(nuxt.render);
+
 
 app.listen(3000,()=>{
   console.log('Server is listening on http://localhost:3000')
