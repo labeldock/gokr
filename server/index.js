@@ -1,5 +1,7 @@
 const express = require('express') 
 const { Nuxt, Builder } = require('nuxt')
+//api
+const gokr = require('./gokr')
 
 //express app
 const app = express()
@@ -13,16 +15,14 @@ const nuxt = new Nuxt(config)
 // 컴파일을 실행합니다.
 if (!isProd) {
   const builder = new Builder(nuxt)
-  
-  builder.build()
+  builder
+  .build()
   .catch(reason=>{
     console.log(`Server nuxt build error\n${reason}`)
   })
 }
 
-app.get('/api/list',(req,res)=>{
-  res.status(200).send({foo:"bar"});
-})
+app.use('/api',gokr);
 
 app.use(nuxt.render);
 
