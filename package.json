@@ -1,0 +1,16 @@
+{
+  "name": "gokr",
+  "version": "0.1.0",
+  "description": "",
+  "author": "AHN HO JUNG",
+  "private": true,
+  "scripts": {
+    "start": "runner ./application npm run start",
+    "build": "runner ./application nuxt bulid"
+  },
+  "dependencies": {
+    "@sepalang/runner": "^0.7.1",
+    "cross-env": "^5.1.4"
+  },
+  "devDependencies": {}
+}
