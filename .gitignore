@@ -1,11 +1,8 @@
 # Private token
-token.json
+**/token.json
 
 # dependencies
-node_modules
-
-# logs
-npm-debug.log
+**/node_modules
 
 # Nuxt build
 .nuxt
