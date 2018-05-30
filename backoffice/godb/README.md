@@ -18,14 +18,14 @@ cron every:string parameter:json task:references user:references
 land role:string domain:string tags:string version:float data:json head:json start:datetime end:datetime user:references
 ```
 
+* Database initialization
 ```
 rails db:migrate
 rails db:seed
 ```
 
-* Database initialization
-
-* How to run the test suite
+* Extra validators
+config/initializers/validators/*
 
 * Services (job queues, cache servers, search engines, etc.)
 
