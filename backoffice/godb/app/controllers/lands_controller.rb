@@ -69,6 +69,6 @@ class LandsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def land_params
-      params.require(:land).permit(:role, :domain, :tags, :version, :data, :head, :start, :end)
+      params.require(:land).permit(:role, :domain, :tags, :version, :data, :head, :start, :end, :user_id)
     end
 end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Crons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Every</th>
+      <th>Parameter</th>
+      <th>Task</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @crons.each do |cron| %>
+      <tr>
+        <td><%= cron.every %></td>
+        <td><%= cron.parameter %></td>
+        <td><%= cron.task %></td>
+        <td><%= cron.user %></td>
+        <td><%= link_to 'Show', cron %></td>
+        <td><%= link_to 'Edit', edit_cron_path(cron) %></td>
+        <td><%= link_to 'Destroy', cron, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cron', new_cron_path %>

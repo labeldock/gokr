@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Every:</strong>
+  <%= @cron.every %>
+</p>
+
+<p>
+  <strong>Parameter:</strong>
+  <%= @cron.parameter %>
+</p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @cron.task %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cron.user %>
+</p>
+
+<%= link_to 'Edit', edit_cron_path(@cron) %> |
+<%= link_to 'Back', crons_path %>

@@ -21,6 +21,7 @@ class LandsTest < ApplicationSystemTestCase
     fill_in "Role", with: @land.role
     fill_in "Start", with: @land.start
     fill_in "Tags", with: @land.tags
+    fill_in "User", with: @land.user_id
     fill_in "Version", with: @land.version
     click_on "Create Land"
 
@@ -39,6 +40,7 @@ class LandsTest < ApplicationSystemTestCase
     fill_in "Role", with: @land.role
     fill_in "Start", with: @land.start
     fill_in "Tags", with: @land.tags
+    fill_in "User", with: @land.user_id
     fill_in "Version", with: @land.version
     click_on "Update Land"
 

@@ -9,6 +9,7 @@ class CreateLands < ActiveRecord::Migration[5.2]
       t.json :head
       t.datetime :start
       t.datetime :end
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

@@ -17,7 +17,7 @@ class LandsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create land" do
     assert_difference('Land.count') do
-      post lands_url, params: { land: { data: @land.data, domain: @land.domain, end: @land.end, head: @land.head, role: @land.role, start: @land.start, tags: @land.tags, version: @land.version } }
+      post lands_url, params: { land: { data: @land.data, domain: @land.domain, end: @land.end, head: @land.head, role: @land.role, start: @land.start, tags: @land.tags, user_id: @land.user_id, version: @land.version } }
     end
 
     assert_redirected_to land_url(Land.last)
@@ -34,7 +34,7 @@ class LandsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update land" do
-    patch land_url(@land), params: { land: { data: @land.data, domain: @land.domain, end: @land.end, head: @land.head, role: @land.role, start: @land.start, tags: @land.tags, version: @land.version } }
+    patch land_url(@land), params: { land: { data: @land.data, domain: @land.domain, end: @land.end, head: @land.head, role: @land.role, start: @land.start, tags: @land.tags, user_id: @land.user_id, version: @land.version } }
     assert_redirected_to land_url(@land)
   end
 

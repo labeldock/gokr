@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  every: MyString
+  parameter: 
+  task: one
+  user: one
+
+two:
+  every: MyString
+  parameter: 
+  task: two
+  user: two

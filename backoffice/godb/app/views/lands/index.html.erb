@@ -13,6 +13,7 @@
       <th>Head</th>
       <th>Start</th>
       <th>End</th>
+      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,6 +29,7 @@
         <td><%= land.head %></td>
         <td><%= land.start %></td>
         <td><%= land.end %></td>
+        <td><%= land.user %></td>
         <td><%= link_to 'Show', land %></td>
         <td><%= link_to 'Edit', edit_land_path(land) %></td>
         <td><%= link_to 'Destroy', land, method: :delete, data: { confirm: 'Are you sure?' } %></td>

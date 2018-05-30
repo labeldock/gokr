@@ -11,7 +11,17 @@ Things you may want to cover:
 rails db:migrate
 
 * Database creation
-land domain:string tags:string version:float data:json head:json start:datetime end:datetime
+```
+user name:string password:string meta:json
+task action:string user:references
+cron every:string parameter:json task:references user:references
+land role:string domain:string tags:string version:float data:json head:json start:datetime end:datetime user:references
+```
+
+```
+rails db:migrate
+rails db:seed
+```
 
 * Database initialization
 
