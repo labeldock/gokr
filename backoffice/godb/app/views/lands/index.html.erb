@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Domain</th>
+      <th>Tags</th>
+      <th>Version</th>
+      <th>Data</th>
+      <th>Head</th>
+      <th>Start</th>
+      <th>End</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lands.each do |land| %>
+      <tr>
+        <td><%= land.role %></td>
+        <td><%= land.domain %></td>
+        <td><%= land.tags %></td>
+        <td><%= land.version %></td>
+        <td><%= land.data %></td>
+        <td><%= land.head %></td>
+        <td><%= land.start %></td>
+        <td><%= land.end %></td>
+        <td><%= link_to 'Show', land %></td>
+        <td><%= link_to 'Edit', edit_land_path(land) %></td>
+        <td><%= link_to 'Destroy', land, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Land', new_land_path %>

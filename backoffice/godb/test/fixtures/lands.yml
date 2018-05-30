@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  role: MyString
+  domain: MyString
+  tags: MyString
+  version: 1.5
+  data: 
+  head: 
+  start: 2018-05-30 13:56:30
+  end: 2018-05-30 13:56:30
+
+two:
+  role: MyString
+  domain: MyString
+  tags: MyString
+  version: 1.5
+  data: 
+  head: 
+  start: 2018-05-30 13:56:30
+  end: 2018-05-30 13:56:30

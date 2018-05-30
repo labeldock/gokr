@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @land.role %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @land.domain %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @land.tags %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @land.version %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @land.data %>
+</p>
+
+<p>
+  <strong>Head:</strong>
+  <%= @land.head %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @land.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @land.end %>
+</p>
+
+<%= link_to 'Edit', edit_land_path(@land) %> |
+<%= link_to 'Back', lands_path %>

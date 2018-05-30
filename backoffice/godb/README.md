@@ -5,13 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
 * System dependencies
 
 * Configuration
+rails db:migrate
 
 * Database creation
+land domain:string tags:string version:float data:json head:json start:datetime end:datetime
 
 * Database initialization
 
